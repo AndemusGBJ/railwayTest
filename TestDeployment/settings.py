@@ -17,7 +17,7 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = "postgresql://postgres:LjdfHeN8IebA09a39Z5o@containers-us-west-103.railway.app:6359/railway"
+DATABASE_URL = "postgresql://postgres:buXtDIv5K8RLVQCcADV1@containers-us-west-65.railway.app:7921/railway"
 
 
 # Quick-start development settings - unsuitable for production
@@ -78,18 +78,18 @@ WSGI_APPLICATION = 'TestDeployment.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 ## Connexion with postgreSql
 
-# DATABASES = {
-#     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
-# }
+DATABASES = {
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+}
 
 
 
